@@ -1,0 +1,114 @@
+﻿
+@model Testing_123.Models.Numberses
+
+@{
+    ViewBag.Title = "Index";
+    int i = 0; int j = 0; int k = 0;    //нумерация массивов для адекватного подсчета в контроллере
+
+    //создание списков для select'ов уровень здания/тип пехоты/тип коницы/тип техники/часы
+    List<SelectListItem> BuildTrainUnit = Testing_123.Models.Numberses.BuildTrainUnit;
+    List<SelectListItem> RealTime = Testing_123.Models.Numberses.RealTime;
+    List<SelectListItem> WarriorType = Testing_123.Infrastructure.Gallic.WarriorType;
+    List<SelectListItem> HorseType = Testing_123.Infrastructure.Gallic.HorseType;
+    List<SelectListItem> MechanismType = Testing_123.Infrastructure.Gallic.MechanismType;
+    List<SelectListItem> ServerType = Testing_123.Models.Numberses.ServerType;
+
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    <table width="80%" border="1" bordercolor="blue">
+        <tr>
+            <td>
+                @Html.DropDownListFor(x => x.serverType, new SelectList(ServerType, "Value", "Text"))
+                @Html.Editor("timeNum")
+                @Html.DropDownListFor(x => x.time, new SelectList(RealTime, "Value", "Text"))
+            </td>
+        </tr>
+    </table>
+
+    
+    <table width="80%" height="50%" border="1" bordercolor="green">
+        <tr>
+            <td>
+                <div>
+                    @Html.DropDownListFor(x => x.ValKaz[i], new SelectList(BuildTrainUnit, "Value", "Text"))
+                    @Html.DropDownListFor(x => x.TypeKaz[i], new SelectList(WarriorType, "Value", "Text"))
+                    @{i++;} <br />
+                    @Html.DropDownListFor(x => x.ValKaz[i], new SelectList(BuildTrainUnit, "Value", "Text"))
+                    @Html.DropDownListFor(x => x.TypeKaz[i], new SelectList(WarriorType, "Value", "Text"))
+                    @{i++;} <br />
+                    @Html.DropDownListFor(x => x.ValKaz[i], new SelectList(BuildTrainUnit, "Value", "Text"))
+                    @Html.DropDownListFor(x => x.TypeKaz[i], new SelectList(WarriorType, "Value", "Text"))
+                    @{i++;} <br />
+                </div>
+            </td>
+            <td>
+                <div>
+                    @Html.DropDownListFor(x => x.ValKon[j], new SelectList(BuildTrainUnit, "Value", "Text"))
+                    @Html.DropDownListFor(x => x.TypeKon[j], new SelectList(HorseType, "Value", "Text"))
+                    @{j++;} <br />
+                    @Html.DropDownListFor(x => x.ValKon[j], new SelectList(BuildTrainUnit, "Value", "Text"))
+                    @Html.DropDownListFor(x => x.TypeKon[j], new SelectList(HorseType, "Value", "Text"))
+                    @{j++;} <br />
+                    @Html.DropDownListFor(x => x.ValKon[j], new SelectList(BuildTrainUnit, "Value", "Text"))
+                    @Html.DropDownListFor(x => x.TypeKon[j], new SelectList(HorseType, "Value", "Text"))
+                    @{j++;} <br />
+                </div>
+            </td>
+            <td>
+                <div>
+                    @Html.DropDownListFor(x => x.ValMast[k], new SelectList(BuildTrainUnit, "Value", "Text"))
+                    @Html.DropDownListFor(x => x.TypeMast[k], new SelectList(MechanismType, "Value", "Text"))
+                    @{k++;} <br />
+                </div>
+            </td>
+            <td>
+                <table align="center">
+                    <tr>
+                        <td><img src="~/Image/abir.jpg" /></td><td>time </td>
+                    </tr>
+                    <tr>
+                        <td>@i</td><td>@j</td>
+                    </tr>
+                    <tr>
+                        <td>@k</td><td>3.2</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Тест 1 = @ViewBag.test1
+            </td>
+            <td>
+                Тест 2 = @ViewBag.test2
+            </td>
+            <td>
+                Тест 3 = @ViewBag.test3
+            </td>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+
+    <table width="80%" border="1" bordercolor="red">
+        <tr>
+            <td>1 "@Html.ValueFor(u => u.Unit1)"</td>
+            <td>2 "@Html.ValueFor(u => u.Unit2)"</td>
+            <td>3 "@Html.ValueFor(u => u.Unit3)"</td>
+            <td>4 "@Html.ValueFor(u => u.Unit4)"</td>
+            <td>5 "@Html.ValueFor(u => u.Unit5)"</td>
+            <td>6 "@Html.ValueFor(u => u.Unit6)"</td>
+            <td>7 "@Html.ValueFor(u => u.Unit7)"</td>
+            <td>8 "@Html.ValueFor(u => u.Unit8)"</td>
+        </tr>
+    </table>
+
+    <div>
+        <input type="submit" />
+    </div>
+}
