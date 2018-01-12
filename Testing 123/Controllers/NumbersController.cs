@@ -46,11 +46,11 @@ namespace Testing_123.Controllers
             {
                 if (typekaz[i] == 1 && valkaz[i] != 0)    //деф пехота
                 {
-                    num.Unit1 += num.SumTime / (10 * num.Gal.Phal.StudyTime / valkaz[i]);
+                    num.Unit1 += num.SumTime / (num.Gal.Phal.StudyTime * valkaz[i] / 10000);
                 }
                 if (typekaz[i] == 2 && valkaz[i] != 0)    //офф пехота
                 {
-                    num.Unit2 += num.SumTime / (10 * num.Gal.Sword.StudyTime / valkaz[i]);
+                    num.Unit2 += num.SumTime / (num.Gal.Sword.StudyTime * valkaz[i] / 10000);
                 }
             }
 
@@ -59,19 +59,19 @@ namespace Testing_123.Controllers
             {
                 if (typekon[i] == 3 && valkon[i] != 0)    //разведы кони
                 {
-                    num.Unit3 += num.SumTime / (10 * num.Gal.Path.StudyTime / valkon[i]);
+                    num.Unit3 += num.SumTime / (num.Gal.Path.StudyTime * valkon[i] / 10000);
                 }
                 if (typekon[i] == 4 && valkon[i] != 0)    //офф кони
                 {
-                    num.Unit4 += num.SumTime / (10 * num.Gal.Theutates.StudyTime / valkon[i]);
+                    num.Unit4 += num.SumTime / (num.Gal.Theutates.StudyTime * valkon[i] / 10000);
                 }
                 if (typekon[i] == 5 && valkon[i] != 0)    //деф кони
                 {
-                    num.Unit5 += num.SumTime / (10 * num.Gal.Druid.StudyTime / valkon[i]);
+                    num.Unit5 += num.SumTime / (num.Gal.Druid.StudyTime * valkon[i] / 10000);
                 }
                 if (typekon[i] == 6 && valkon[i] != 0)    //офф/деф кони
                 {
-                    num.Unit6 += num.SumTime / (10 * num.Gal.Haed.StudyTime / valkon[i]);
+                    num.Unit6 += num.SumTime / (num.Gal.Haed.StudyTime * valkon[i] / 10000);
                 }
             }
 
@@ -80,11 +80,11 @@ namespace Testing_123.Controllers
             {
                 if (typemast[i] == 7 && valmast[i] != 0)   //офф тараны
                 {
-                    num.Unit7 += num.SumTime / (10 * num.Gal.Ram.StudyTime / valmast[i]);
+                    num.Unit7 += num.SumTime / (num.Gal.Ram.StudyTime * valmast[i] / 10000);
                 }
                 if (typemast[i] == 8 && valmast[i] != 0)   //офф каты
                 {
-                    num.Unit8 += num.SumTime / (10 * num.Gal.Treb.StudyTime / valmast[i]);
+                    num.Unit8 += num.SumTime / (num.Gal.Treb.StudyTime * valmast[i] / 10000);
                 }
             }
 
