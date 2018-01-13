@@ -29,7 +29,7 @@
         </tr>
     </table>
 
-    
+    <br />
     <table width="80%" height="50%" border="1" bordercolor="green">
         <tr>
             <td>
@@ -65,36 +65,10 @@
                     @{k++;} <br />
                 </div>
             </td>
-            <td>
-                <table align="center">
-                    <tr>
-                        <td><img src="~/Image/abir.jpg" /></td><td>time </td>
-                    </tr>
-                    <tr>
-                        <td>@i</td><td>@j</td>
-                    </tr>
-                    <tr>
-                        <td>@k</td><td>3.2</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Тест 1 = @ViewBag.test1
-            </td>
-            <td>
-                Тест 2 = @ViewBag.test2
-            </td>
-            <td>
-                Тест 3 = @ViewBag.test3
-            </td>
-            <td>
-
-            </td>
         </tr>
     </table>
 
+    <br />
     <table width="80%" border="1" bordercolor="red">
         <tr>
             <td>1 "@Html.ValueFor(u => u.Unit1)"</td>
@@ -108,7 +82,44 @@
         </tr>
     </table>
 
+    <br />
     <div>
         <input type="submit" />
     </div>
 }
+
+<br />
+<br />
+<table width="30%" border="1" bordercolor="green">
+    <tr>сводная таблица</tr>
+    <tr>
+        <td>счетчик для казармы</td>
+        <td>@i</td>
+    </tr>
+    <tr>
+        <td>счетчик для конюшни</td>
+        <td>@j</td>
+    </tr>
+    <tr>
+        <td>счетчик для мастерской</td>
+        <td>@k</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>
+            Тест 1 = @ViewBag.test1
+        </td>
+        <td>
+            Тест 2 = @ViewBag.test2
+        </td>
+        <td>
+            Тест 3 = @ViewBag.test3
+        </td>
+        <td>
+
+        </td>
+    </tr>
+</table>
