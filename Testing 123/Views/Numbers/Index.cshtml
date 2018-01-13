@@ -5,13 +5,13 @@
     ViewBag.Title = "Index";
     int i = 0; int j = 0; int k = 0;    //нумерация массивов для адекватного подсчета в контроллере
 
-    //создание списков для select'ов уровень здания/тип пехоты/тип коницы/тип техники/часы
-    List<SelectListItem> BuildTrainUnit = Testing_123.Models.Numberses.BuildTrainUnit;
-    List<SelectListItem> RealTime = Testing_123.Models.Numberses.RealTime;
-    List<SelectListItem> WarriorType = Testing_123.Infrastructure.Gallic.WarriorType;
-    List<SelectListItem> HorseType = Testing_123.Infrastructure.Gallic.HorseType;
-    List<SelectListItem> MechanismType = Testing_123.Infrastructure.Gallic.MechanismType;
-    List<SelectListItem> ServerType = Testing_123.Models.Numberses.ServerType;
+    //создание списков select'ов
+    List<SelectListItem> BuildTrainUnit = Testing_123.Models.Numberses.BuildTrainUnit;      //для уровней обучающих зданий
+    List<SelectListItem> RealTime = Testing_123.Models.Numberses.RealTime;                  //для времени обучени час/сутки/неделя/месяц/год
+    List<SelectListItem> WarriorType = Testing_123.Infrastructure.Gallic.WarriorType;       //тип войск для казарм
+    List<SelectListItem> HorseType = Testing_123.Infrastructure.Gallic.HorseType;           //тип войск для конюшен
+    List<SelectListItem> MechanismType = Testing_123.Infrastructure.Gallic.MechanismType;   //тип войск для мастерских
+    List<SelectListItem> ServerType = Testing_123.Models.Numberses.ServerType;              //для типа сервера
 
 }
 
@@ -23,14 +23,14 @@
         <tr>
             <td>
                 @Html.DropDownListFor(x => x.serverType, new SelectList(ServerType, "Value", "Text"))
-                @Html.Editor("timeNum")
+                @Html.EditorFor(x => x.timeNum)
                 @Html.DropDownListFor(x => x.time, new SelectList(RealTime, "Value", "Text"))
             </td>
         </tr>
     </table>
 
     <br />
-    <table width="80%" height="50%" border="1" bordercolor="green">
+    <table width="80%" border="1" bordercolor="green">
         <tr>
             <td>
                 <div>
@@ -82,44 +82,90 @@
         </tr>
     </table>
 
-    <br />
+    
     <div>
+        <br />
         <input type="submit" />
     </div>
 }
 
 <br />
 <br />
-<table width="30%" border="1" bordercolor="green">
-    <tr>сводная таблица</tr>
-    <tr>
-        <td>счетчик для казармы</td>
-        <td>@i</td>
-    </tr>
-    <tr>
-        <td>счетчик для конюшни</td>
-        <td>@j</td>
-    </tr>
-    <tr>
-        <td>счетчик для мастерской</td>
-        <td>@k</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>
-            Тест 1 = @ViewBag.test1
-        </td>
-        <td>
-            Тест 2 = @ViewBag.test2
-        </td>
-        <td>
-            Тест 3 = @ViewBag.test3
-        </td>
-        <td>
 
-        </td>
-    </tr>
-</table>
+<div>
+    <div>
+        <table width="30%" border="1" bordercolor="green" float="left">
+            <tr><td>сводная таблица</td></tr>
+            <tr>
+                <td>счетчик для казармы</td>
+                <td>@i</td>
+            </tr>
+            <tr>
+                <td>счетчик для конюшни</td>
+                <td>@j</td>
+            </tr>
+            <tr>
+                <td>счетчик для мастерской</td>
+                <td>@k</td>
+            </tr>
+            <tr>
+                <td>Тест 1</td>
+                <td>@ViewBag.test1</td>
+            </tr>
+            <tr>
+                <td>Тест 2</td>
+                <td>@ViewBag.test2</td>
+            </tr>
+            <tr>
+                <td>Тест 3</td>
+                <td>@ViewBag.test3</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table width="30%" border="1">
+            <tr>
+                <td>одинарная</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<br />
+<br />
+<br />

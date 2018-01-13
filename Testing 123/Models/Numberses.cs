@@ -12,6 +12,7 @@ namespace Testing_123.Models
         public double SumPAtack { get; set; }
         public double SumTest { get; set; }
         
+        //суммирование войск по типам от 1 до 8
         public int Unit1 { get; set; }
         public int Unit2 { get; set; }
         public int Unit3 { get; set; }
@@ -88,11 +89,5 @@ namespace Testing_123.Models
         public Haeduan Haed = new Haeduan();
         public Ram Ram = new Ram();
         public Trebuchet Treb = new Trebuchet();
-    }
-
-    public class Summary
-    {
-        public double SumPAtack { get; set; }
-        public double SumPDef { get; set; }
     }
 }
