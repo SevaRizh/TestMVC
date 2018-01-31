@@ -91,20 +91,31 @@ namespace Testing_123.Controllers
             num.SumAtack = num.Unit2 * num.Gal.Unit2.Atack + num.Unit4 * num.Gal.Unit4.Atack 
                 + num.Unit6 * num.Gal.Unit6.Atack + num.Unit7 * num.Gal.Unit7.Atack + num.Unit8 * num.Gal.Unit8.Atack;
 
-            num.SumPDef = 0;
+            num.SumPDef = num.Unit1 * num.Gal.Unit1.PDef + num.Unit5 * num.Gal.Unit5.PDef + num.Unit6 * num.Gal.Unit6.PDef;
 
-            num.SumKDef = 0;
+            num.SumKDef = num.Unit1 * num.Gal.Unit1.KDef + num.Unit5 * num.Gal.Unit5.KDef + num.Unit6 * num.Gal.Unit6.KDef;
 
-            num.SumLuValue = 0;
+            num.SumLuValue = num.Unit1 * num.Gal.Unit1.LuValue + num.Unit2 * num.Gal.Unit2.LuValue + num.Unit3 * num.Gal.Unit3.LuValue 
+                + num.Unit4 * num.Gal.Unit4.LuValue + num.Unit5 * num.Gal.Unit5.LuValue + num.Unit6 * num.Gal.Unit6.LuValue 
+                + num.Unit7 * num.Gal.Unit7.LuValue + num.Unit8 * num.Gal.Unit8.LuValue;
 
-            num.SumClValue = 0;
+            num.SumClValue = num.Unit1 * num.Gal.Unit1.ClValue + num.Unit2 * num.Gal.Unit2.ClValue + num.Unit3 * num.Gal.Unit3.ClValue 
+                + num.Unit4 * num.Gal.Unit4.ClValue + num.Unit5 * num.Gal.Unit5.ClValue + num.Unit6 * num.Gal.Unit6.ClValue 
+                + num.Unit7 * num.Gal.Unit7.ClValue + num.Unit8 * num.Gal.Unit8.ClValue;
 
-            num.SumIrValue = 0;
+            num.SumIrValue = num.Unit1 * num.Gal.Unit1.IrValue + num.Unit2 * num.Gal.Unit2.IrValue + num.Unit3 * num.Gal.Unit3.IrValue 
+                + num.Unit4 * num.Gal.Unit4.IrValue + num.Unit5 * num.Gal.Unit5.IrValue + num.Unit6 * num.Gal.Unit6.IrValue 
+                + num.Unit7 * num.Gal.Unit7.IrValue + num.Unit8 * num.Gal.Unit8.IrValue;
 
-            num.SumCrValue = 0;
+            num.SumCrValue = num.Unit1 * num.Gal.Unit1.CrValue + num.Unit2 * num.Gal.Unit2.CrValue + num.Unit3 * num.Gal.Unit3.CrValue 
+                + num.Unit4 * num.Gal.Unit4.CrValue + num.Unit5 * num.Gal.Unit5.CrValue + num.Unit6 * num.Gal.Unit6.CrValue 
+                + num.Unit7 * num.Gal.Unit7.CrValue + num.Unit8 * num.Gal.Unit8.CrValue;
 
-            num.SumSumValue = 0;
+            num.SumSumValue = num.Unit1 * num.Gal.Unit1.SumValue + num.Unit2 * num.Gal.Unit2.SumValue + num.Unit3 * num.Gal.Unit3.SumValue 
+                + num.Unit4 * num.Gal.Unit4.SumValue + num.Unit5 * num.Gal.Unit5.SumValue + num.Unit6 * num.Gal.Unit6.SumValue 
+                + num.Unit7 * num.Gal.Unit7.SumValue + num.Unit8 * num.Gal.Unit8.SumValue;
 
+            
 
             ViewBag.test1 = num.SumAtack;
             ViewBag.test2 = 0;
