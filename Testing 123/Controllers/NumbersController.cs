@@ -18,7 +18,7 @@ namespace Testing_123.Controllers
         {
             Numberses num = new Numberses();
 
-            ViewBag.test1 = number.Gal.Phal.StudyTime;
+            ViewBag.test1 = 0;
             ViewBag.test2 = 0;
             ViewBag.test3 = 0;
             ViewBag.time = 0;
@@ -44,34 +44,34 @@ namespace Testing_123.Controllers
             //расчет для казарм
             for (int i = 0; i < valkaz.Length; i++)
             {
-                if (typekaz[i] == 1 && valkaz[i] != 0)    //деф пехота
+                if (typekaz[i] == 1 && valkaz[i] != 0)    //деф пехота - фал
                 {
-                    num.Unit1 += num.SumTime / (num.Gal.Phal.StudyTime * valkaz[i] / 10000);
+                    num.Unit1 += num.SumTime / (num.Gal.Unit1.StudyTime * valkaz[i] / 10000);
                 }
-                if (typekaz[i] == 2 && valkaz[i] != 0)    //офф пехота
+                if (typekaz[i] == 2 && valkaz[i] != 0)    //офф пехота - меч
                 {
-                    num.Unit2 += num.SumTime / (num.Gal.Sword.StudyTime * valkaz[i] / 10000);
+                    num.Unit2 += num.SumTime / (num.Gal.Unit2.StudyTime * valkaz[i] / 10000);
                 }
             }
 
             //расчет для конюшен
             for (int i = 0; i < valkon.Length; i++)
             {
-                if (typekon[i] == 3 && valkon[i] != 0)    //разведы кони
+                if (typekon[i] == 3 && valkon[i] != 0)    //разведы кони - развед
                 {
-                    num.Unit3 += num.SumTime / (num.Gal.Path.StudyTime * valkon[i] / 10000);
+                    num.Unit3 += num.SumTime / (num.Gal.Unit3.StudyTime * valkon[i] / 10000);
                 }
-                if (typekon[i] == 4 && valkon[i] != 0)    //офф кони
+                if (typekon[i] == 4 && valkon[i] != 0)    //офф кони - гром
                 {
-                    num.Unit4 += num.SumTime / (num.Gal.Theutates.StudyTime * valkon[i] / 10000);
+                    num.Unit4 += num.SumTime / (num.Gal.Unit4.StudyTime * valkon[i] / 10000);
                 }
-                if (typekon[i] == 5 && valkon[i] != 0)    //деф кони
+                if (typekon[i] == 5 && valkon[i] != 0)    //деф кони - друль
                 {
-                    num.Unit5 += num.SumTime / (num.Gal.Druid.StudyTime * valkon[i] / 10000);
+                    num.Unit5 += num.SumTime / (num.Gal.Unit5.StudyTime * valkon[i] / 10000);
                 }
-                if (typekon[i] == 6 && valkon[i] != 0)    //офф/деф кони
+                if (typekon[i] == 6 && valkon[i] != 0)    //офф/деф кони - эдуй
                 {
-                    num.Unit6 += num.SumTime / (num.Gal.Haed.StudyTime * valkon[i] / 10000);
+                    num.Unit6 += num.SumTime / (num.Gal.Unit6.StudyTime * valkon[i] / 10000);
                 }
             }
 
@@ -80,20 +80,35 @@ namespace Testing_123.Controllers
             {
                 if (typemast[i] == 7 && valmast[i] != 0)   //офф тараны
                 {
-                    num.Unit7 += num.SumTime / (num.Gal.Ram.StudyTime * valmast[i] / 10000);
+                    num.Unit7 += num.SumTime / (num.Gal.Unit7.StudyTime * valmast[i] / 10000);
                 }
                 if (typemast[i] == 8 && valmast[i] != 0)   //офф каты
                 {
-                    num.Unit8 += num.SumTime / (num.Gal.Treb.StudyTime * valmast[i] / 10000);
+                    num.Unit8 += num.SumTime / (num.Gal.Unit8.StudyTime * valmast[i] / 10000);
                 }
             }
 
+            num.SumAtack = num.Unit2 * num.Gal.Unit2.Atack + num.Unit4 * num.Gal.Unit4.Atack 
+                + num.Unit6 * num.Gal.Unit6.Atack + num.Unit7 * num.Gal.Unit7.Atack + num.Unit8 * num.Gal.Unit8.Atack;
 
-            int atack = num.Gal.Sword.Atack;
+            num.SumPDef = 0;
 
-            ViewBag.test1 = num.SumPAtack;
-            ViewBag.test2 = atack;
-            ViewBag.test3 = num.SumTest;
+            num.SumKDef = 0;
+
+            num.SumLuValue = 0;
+
+            num.SumClValue = 0;
+
+            num.SumIrValue = 0;
+
+            num.SumCrValue = 0;
+
+            num.SumSumValue = 0;
+
+
+            ViewBag.test1 = num.SumAtack;
+            ViewBag.test2 = 0;
+            ViewBag.test3 = 0;
             ViewBag.time = timeNum;
 
             return View(num);

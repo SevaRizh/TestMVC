@@ -9,7 +9,15 @@ namespace Testing_123.Models
 {
     public class Numberses
     {
-        public double SumPAtack { get; set; }
+        public int SumAtack { get; set; }
+        public int SumPDef { get; set; }
+        public int SumKDef { get; set; }
+        public int SumLuValue { get; set; }
+        public int SumClValue { get; set; }
+        public int SumIrValue { get; set; }
+        public int SumCrValue { get; set; }
+        public int SumSumValue { get; set; }
+        public int SumCargo { get; set; }
         public double SumTest { get; set; }
         
         //суммирование войск по типам от 1 до 8
@@ -81,13 +89,13 @@ namespace Testing_123.Models
 
     public class Gal
     {
-        public Swordsman Sword = new Swordsman();
-        public Phalanx Phal = new Phalanx();
-        public Pathfinder Path = new Pathfinder();
-        public TheutatesThunder Theutates = new TheutatesThunder();
-        public Druidrider Druid = new Druidrider();
-        public Haeduan Haed = new Haeduan();
-        public Ram Ram = new Ram();
-        public Trebuchet Treb = new Trebuchet();
+        public Phalanx Unit1 = new Phalanx();
+        public Swordsman Unit2 = new Swordsman();
+        public Pathfinder Unit3 = new Pathfinder();
+        public TheutatesThunder Unit4 = new TheutatesThunder();
+        public Druidrider Unit5 = new Druidrider();
+        public Haeduan Unit6 = new Haeduan();
+        public Ram Unit7 = new Ram();
+        public Trebuchet Unit8 = new Trebuchet();
     }
 }
