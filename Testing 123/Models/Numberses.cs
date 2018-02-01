@@ -18,6 +18,7 @@ namespace Testing_123.Models
         public int SumCrValue { get; set; }
         public int SumSumValue { get; set; }
         public int SumCargo { get; set; }
+        public int SumExpend { get; set; }
         public double SumTest { get; set; }
         
         //суммирование войск по типам от 1 до 8

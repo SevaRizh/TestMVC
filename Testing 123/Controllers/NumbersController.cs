@@ -111,11 +111,12 @@ namespace Testing_123.Controllers
                 + num.Unit4 * num.Gal.Unit4.CrValue + num.Unit5 * num.Gal.Unit5.CrValue + num.Unit6 * num.Gal.Unit6.CrValue 
                 + num.Unit7 * num.Gal.Unit7.CrValue + num.Unit8 * num.Gal.Unit8.CrValue;
 
-            num.SumSumValue = num.Unit1 * num.Gal.Unit1.SumValue + num.Unit2 * num.Gal.Unit2.SumValue + num.Unit3 * num.Gal.Unit3.SumValue 
-                + num.Unit4 * num.Gal.Unit4.SumValue + num.Unit5 * num.Gal.Unit5.SumValue + num.Unit6 * num.Gal.Unit6.SumValue 
-                + num.Unit7 * num.Gal.Unit7.SumValue + num.Unit8 * num.Gal.Unit8.SumValue;
+            num.SumSumValue = num.SumLuValue + num.SumClValue + num.SumIrValue + num.SumCrValue;
 
-            
+
+            num.SumExpend = num.Unit1 * num.Gal.Unit1.Expend + num.Unit2 * num.Gal.Unit2.Expend + num.Unit3 * num.Gal.Unit3.Expend
+                + num.Unit4 * num.Gal.Unit4.Expend + num.Unit5 * num.Gal.Unit5.Expend + num.Unit6 * num.Gal.Unit6.Expend
+                + num.Unit7 * num.Gal.Unit7.Expend + num.Unit8 * num.Gal.Unit8.Expend;
 
             ViewBag.test1 = num.SumAtack;
             ViewBag.test2 = 0;
