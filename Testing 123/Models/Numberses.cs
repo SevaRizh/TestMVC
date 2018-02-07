@@ -38,8 +38,12 @@ namespace Testing_123.Models
         
         public double[] ValKaz { get; set; }    //уровни казарм массивом
         public int[] TypeKaz { get; set; }      //тип обучаемых войск в казарме
+        public bool[] CheckKaz { get; set; }    //чекбокс БКБК
+
         public double[] ValKon { get; set; }    //уровни конюшен массивом
         public int[] TypeKon { get; set; }      //тип обучаемых войск в конюшне
+        public bool[] CheckKon { get; set; }    //чекбокс БКБК
+
         public double[] ValMast { get; set; }   //уровни мастерских массивом
         public int[] TypeMast { get; set; }     //тип обучаемых войск в мастерской
 

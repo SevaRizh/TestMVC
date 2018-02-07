@@ -38,34 +38,40 @@
                         <tr>
                             <td>
                                 <div>
-                                    @Html.DropDownListFor(x => x.ValKaz[i], new SelectList(BuildTrainUnit, "Value", "Text"))
-                                    @Html.DropDownListFor(x => x.TypeKaz[i], new SelectList(WarriorType, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.ValKaz[i], new SelectList(BuildTrainUnit, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.TypeKaz[i], new SelectList(WarriorType, "Value", "Text"))
+                                    @Html.CheckBoxFor(u => u.CheckKaz[i])
                                     @{i++;} <br />
-                                    @Html.DropDownListFor(x => x.ValKaz[i], new SelectList(BuildTrainUnit, "Value", "Text"))
-                                    @Html.DropDownListFor(x => x.TypeKaz[i], new SelectList(WarriorType, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.ValKaz[i], new SelectList(BuildTrainUnit, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.TypeKaz[i], new SelectList(WarriorType, "Value", "Text"))
+                                    @Html.CheckBoxFor(u => u.CheckKaz[i])
                                     @{i++;} <br />
-                                    @Html.DropDownListFor(x => x.ValKaz[i], new SelectList(BuildTrainUnit, "Value", "Text"))
-                                    @Html.DropDownListFor(x => x.TypeKaz[i], new SelectList(WarriorType, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.ValKaz[i], new SelectList(BuildTrainUnit, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.TypeKaz[i], new SelectList(WarriorType, "Value", "Text"))
+                                    @Html.CheckBoxFor(u => u.CheckKaz[i])
                                     @{i++;} <br />
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    @Html.DropDownListFor(x => x.ValKon[j], new SelectList(BuildTrainUnit, "Value", "Text"))
-                                    @Html.DropDownListFor(x => x.TypeKon[j], new SelectList(HorseType, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.ValKon[j], new SelectList(BuildTrainUnit, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.TypeKon[j], new SelectList(HorseType, "Value", "Text"))
+                                    @Html.CheckBoxFor(u => u.CheckKon[j])
                                     @{j++;} <br />
-                                    @Html.DropDownListFor(x => x.ValKon[j], new SelectList(BuildTrainUnit, "Value", "Text"))
-                                    @Html.DropDownListFor(x => x.TypeKon[j], new SelectList(HorseType, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.ValKon[j], new SelectList(BuildTrainUnit, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.TypeKon[j], new SelectList(HorseType, "Value", "Text"))
+                                    @Html.CheckBoxFor(u => u.CheckKon[j])
                                     @{j++;} <br />
-                                    @Html.DropDownListFor(x => x.ValKon[j], new SelectList(BuildTrainUnit, "Value", "Text"))
-                                    @Html.DropDownListFor(x => x.TypeKon[j], new SelectList(HorseType, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.ValKon[j], new SelectList(BuildTrainUnit, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.TypeKon[j], new SelectList(HorseType, "Value", "Text"))
+                                    @Html.CheckBoxFor(u => u.CheckKon[j])
                                     @{j++;} <br />
                                 </div>
                             </td>
                             <td>
                                 <div>
-                                    @Html.DropDownListFor(x => x.ValMast[k], new SelectList(BuildTrainUnit, "Value", "Text"))
-                                    @Html.DropDownListFor(x => x.TypeMast[k], new SelectList(MechanismType, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.ValMast[k], new SelectList(BuildTrainUnit, "Value", "Text"))
+                                    @Html.DropDownListFor(u => u.TypeMast[k], new SelectList(MechanismType, "Value", "Text"))
                                     @{k++;} <br />
                                 </div>
                             </td>
